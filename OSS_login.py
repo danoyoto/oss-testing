@@ -88,7 +88,7 @@ def scrapping(site):
 def details(site):
 #    time.sleep(5)
     while driver.current_url != (urls[site] + "account"):
-        time.sleep(1)
+        time.sleep(2)
     while driver.current_url == (urls[site] + "account"):
         driver.find_element_by_xpath("//a[contains(text(),'More Details')]").click()
         print('here is the billing details page')
@@ -129,8 +129,8 @@ def logout(site):
 # Finding Element by Classname
 
 def getlist():
-    elements = driver.find_elements_by_name("//*[not(*)]")
-    #elements = driver.find_elements_by_name("*")
+    #elements = driver.find_elements_by_css("//*[not(*)]")
+    elements = driver.find_elements_by_name("*")
     for i in elements:
         print(i)
         #print(chr(i))
