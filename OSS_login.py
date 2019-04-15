@@ -68,7 +68,7 @@ def scrapping(site):
         WebDriverWait(driver, 60).until(EC.presence_of_element_located(elshim))
         print("still shimmering")
     except NoSuchElementException:
-        print("scrapping complete - cool cool cool")
+        print("scrapping complete? - cool cool cool")
         #driver.get(urls[site] + "account/billing")
     finally:
         print("and we are done!")
@@ -144,7 +144,7 @@ page(site)
 login(site)
 #details(site)
 #policy_check(site)
-#scrapping(site)
+scrapping(site)
 #getlist()
 logout(site)
 
