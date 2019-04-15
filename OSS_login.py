@@ -112,6 +112,7 @@ def logout(site):
     driver.find_element_by_css_selector('button.Btn.AccountBtn').click()
     driver.find_element_by_xpath("//a[contains(text(),'Log Out')]").click()
     print('and now we are out')
+    driver.quit()
     #assert /account
     #click logout
     #click logout
@@ -141,7 +142,7 @@ driver = webdriver.Chrome()
 site = 'drisi'
 page(site)
 login(site)
-details(site)
+#details(site)
 #policy_check(site)
 #scrapping(site)
 #getlist()
